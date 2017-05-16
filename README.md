@@ -1,2 +1,6 @@
 # diku-ir
-Information retrieval course at DIKU 2017
+Information Retrieval
+University of Copenhagen, DIKU
+2017 (Block 4)
+
+Source code and reports developed during the course.
