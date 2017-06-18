@@ -61,7 +61,6 @@ if __name__ == '__main__':
     heap = lambda x: x**(0.5) * 22
     plt.plot(xs, map(heap, xs), 'b-', label="Heaps")
 
-    # plt.loglog(xs_rank, ys_freq_zipf, 'k--', label="zipf")
     plt.title("Analysis of Heaps' Law\nThe Brother's Karamazov by Fyodor Dostoyevsky\n\n$K=22, \\beta=0.5$")
     plt.xlabel(r"text length")
     plt.ylabel(r"frequency")
