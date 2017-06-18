@@ -55,13 +55,16 @@ if __name__ == '__main__':
     plt.figure(figsize=(16, 8))
     matplotlib.rcParams.update({'font.size': 20})
     plt.plot(xs, ys, 'r.-', label="word")
-    plt.axis( [0,max(xs)+500,0,max(ys)+100] )
+    plt.axis( [0,max(xs)+500,0,16000] )
 
     xs = range(0, max(xs)+500, 500)
-    heap = lambda x: x**(0.5) * 22
+
+    k,b = 21, 0.5
+    heap = lambda x: x**(b) * k
     plt.plot(xs, map(heap, xs), 'b-', label="Heaps")
 
-    plt.title("Analysis of Heaps' Law\nThe Brother's Karamazov by Fyodor Dostoyevsky\n\n$K=22, \\beta=0.5$")
+    # plt.loglog(xs_rank, ys_freq_zipf, 'k--', label="zipf")
+    plt.title("Analysis of Heaps' Law\nThe Brother's Karamazov by Fyodor Dostoyevsky\n\n$k=30, b=0.5$")
     plt.xlabel(r"text length")
     plt.ylabel(r"frequency")
     plt.grid(True)
